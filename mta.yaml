@@ -1,0 +1,17 @@
+_schema-version: '2.0'
+ID: openSAPHANASP12
+description: openSAP HANA SP12 Group 01
+version: 0.0.1
+
+modules:
+- name: web
+  type: html5
+  path: web
+  requires:
+      - name: openSAPHANASP12_01-uaa
+      
+resources:
+  - name: openSAPHANASP12_01-uaa
+    type: com.sap.xs.uaa
+    parameters:
+      config_path: ./xs-security.json 
