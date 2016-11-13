@@ -10,8 +10,25 @@ modules:
   requires:
       - name: openSAPHANASP12_01-uaa
       
+- name: core-db
+  type: hdb
+  path: core-db
+  requires:
+   - name: hdi-container
+     properties: 
+       TARGET_CONTAINER: ~{hdi-container-name}
+
 resources:
   - name: openSAPHANASP12_01-uaa
     type: com.sap.xs.uaa
     parameters:
       config_path: ./xs-security.json 
+
+  - name: hdi-container
+    properties:
+       hdi-container-name: ${service-name}
+    type: com.sap.xs.hdi-container
+    parameters:
+      config:
+        schema: OPENSAP_HANASP12
+
