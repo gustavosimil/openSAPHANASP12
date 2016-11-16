@@ -1,0 +1,7 @@
+{
+	"admin":{
+		"Ref1": {
+			"schema": "OPENSAP_HANASP12"
+		}
+	}
+}
