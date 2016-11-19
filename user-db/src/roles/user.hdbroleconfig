@@ -1,0 +1,7 @@
+{
+	"user":{
+		"Ref1": {
+			"schema": "OPENSAP_HANA5_USER01"
+		}
+	}
+}
